@@ -12,6 +12,9 @@ import java.util.IntSummaryStatistics;
 import java.util.stream.Collectors;
 
 import static org.testng.Assert.assertEquals;
+import static org.testng.Assert.assertNotNull;
+
+import static org.assertj.core.api.Assertions.assertThat;
 
 public class RankingTest {
 
@@ -72,6 +75,60 @@ public class RankingTest {
 
             assertEquals(count, 3);
             assertEquals(average, 7);
+        }
+    }
+
+    @Test
+    public void testChangeRanking() {
+        populateRankingData();
+
+        try (var session = sessionFactory.openSession()) {
+            var transaction = session.beginTransaction();
+
+            Query<Ranking> query = session.createQuery(
+                    "from Ranking r "
+                            + "where r.subject.name = :subject and "
+                            + "r.observer.name = :observer and "
+                            + "r.skill.name = :skill"
+                    , Ranking.class);
+
+            query.setParameter("subject", "J. C. Smell");
+            query.setParameter("observer", "Gene Showrama");
+            query.setParameter("skill", "Java");
+
+            // get the one unique result with this combination
+            var ranking = query.uniqueResult();
+            assertNotNull(ranking, "Could not find matching ranking");
+            ranking.setRanking(9); // this is the updating ranking value
+
+            transaction.commit();
+        }
+
+        assertThat(getAverage("J. C. Smell", "Java")).isEqualTo(8);
+    }
+
+    private int getAverage(String subjectName, String skillName) {
+        try (var session = sessionFactory.openSession()) {
+            var transcation = session.beginTransaction();
+
+            Query<Ranking> rankingQuery = session.createQuery(
+                    "from Ranking r "
+                            + "where r.subject.name = :subject and "
+                            + "r.skill.name = :skill"
+                    , Ranking.class);
+
+            rankingQuery.setParameter("subject", subjectName);
+            rankingQuery.setParameter("skill", skillName);
+
+            IntSummaryStatistics statistics = rankingQuery.list()
+                    .stream()
+                    .collect(Collectors.summarizingInt(Ranking::getRanking));
+
+            int average = (int) statistics.getAverage();
+
+            transcation.commit();
+
+            return average;
         }
     }
 

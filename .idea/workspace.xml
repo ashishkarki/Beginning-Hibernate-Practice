@@ -2,22 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="160ccef0-5760-46d9-b83c-f241cfe7b2f8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chapter03/src/main/java/chapter03/application/HibernateRankingService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chapter03/src/main/java/chapter03/application/RankingService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chapter03/src/main/java/chapter03/hibernate/Ranking.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chapter03/src/main/java/chapter03/hibernate/Skill.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chapter03/src/main/java/chapter03/simple/Ranking.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chapter03/src/test/java/chapter03/hibernate/PersonTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chapter03/src/test/java/chapter03/hibernate/RankingTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chapter03/src/test/java/chapter03/simple/ModelTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chapter03/src/test/resources/hibernate.cfg.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chapter03/src/main/java/chapter03/simple/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/chapter03/src/main/java/chapter03/hibernate/Person.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chapter03/src/main/java/chapter03/simple/Skill.java" beforeDir="false" afterPath="$PROJECT_DIR$/chapter03/src/main/java/chapter03/simple/Skill.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chapter03/db2.mv.db" beforeDir="false" afterPath="$PROJECT_DIR$/chapter03/db2.mv.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chapter03/src/test/java/chapter03/hibernate/RankingTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/chapter03/src/test/java/chapter03/hibernate/RankingTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chapter03/target/test-classes/chapter03/hibernate/RankingTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/chapter03/target/test-classes/chapter03/hibernate/RankingTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,7 +64,7 @@
       <recent name="C:\Users\Sushma Karki\Desktop\ashish-temp-disposable\Java-related\Beginning-Hibernate-Practice\chapter02\src\main\resources" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.RankingTest">
+  <component name="RunManager" selected="TestNG.RankingTest.testChangeRanking">
     <configuration name="ModelTest.testModelCreation" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="chapter03" />
       <extension name="coverage">
@@ -89,25 +77,6 @@
       <option name="MAIN_CLASS_NAME" value="chapter03.simple.ModelTest" />
       <option name="METHOD_NAME" value="testModelCreation" />
       <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="PersistenceTest.readMessage (1)" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="chapter02" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="chapter02.hibernate.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="chapter02.hibernate" />
-      <option name="MAIN_CLASS_NAME" value="chapter02.hibernate.PersistenceTest" />
-      <option name="METHOD_NAME" value="readMessage" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <option name="PARAMETERS" value="0" />
       <properties />
       <listeners />
       <method v="2">
@@ -166,13 +135,31 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="RankingTest.testChangeRanking" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="chapter03" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="chapter03.hibernate.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="chapter03.hibernate" />
+      <option name="MAIN_CLASS_NAME" value="chapter03.hibernate.RankingTest" />
+      <option name="METHOD_NAME" value="testChangeRanking" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.RankingTest.testChangeRanking" />
         <item itemvalue="TestNG.RankingTest" />
         <item itemvalue="TestNG.PersonTest" />
         <item itemvalue="TestNG.ModelTest.testModelCreation" />
         <item itemvalue="TestNG.PersistenceTest.readMessage" />
-        <item itemvalue="TestNG.PersistenceTest.readMessage (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -238,22 +225,22 @@
       <screen x="0" y="0" width="1280" height="689" />
     </state>
     <state x="441" y="98" key="FileChooserDialogImpl/0.0.1280.689@0.0.1280.689" timestamp="1576579443785" />
-    <state width="1235" height="283" key="GridCell.Tab.0.bottom" timestamp="1576584437273">
+    <state width="1235" height="283" key="GridCell.Tab.0.bottom" timestamp="1576585683834">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state width="1235" height="283" key="GridCell.Tab.0.bottom/0.0.1280.689@0.0.1280.689" timestamp="1576584437273" />
-    <state width="1235" height="283" key="GridCell.Tab.0.center" timestamp="1576584437272">
+    <state width="1235" height="283" key="GridCell.Tab.0.bottom/0.0.1280.689@0.0.1280.689" timestamp="1576585683834" />
+    <state width="1235" height="283" key="GridCell.Tab.0.center" timestamp="1576585683833">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state width="1235" height="283" key="GridCell.Tab.0.center/0.0.1280.689@0.0.1280.689" timestamp="1576584437272" />
-    <state width="1235" height="283" key="GridCell.Tab.0.left" timestamp="1576584437272">
+    <state width="1235" height="283" key="GridCell.Tab.0.center/0.0.1280.689@0.0.1280.689" timestamp="1576585683833" />
+    <state width="1235" height="283" key="GridCell.Tab.0.left" timestamp="1576585683833">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state width="1235" height="283" key="GridCell.Tab.0.left/0.0.1280.689@0.0.1280.689" timestamp="1576584437272" />
-    <state width="1235" height="283" key="GridCell.Tab.0.right" timestamp="1576584437273">
+    <state width="1235" height="283" key="GridCell.Tab.0.left/0.0.1280.689@0.0.1280.689" timestamp="1576585683833" />
+    <state width="1235" height="283" key="GridCell.Tab.0.right" timestamp="1576585683833">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state width="1235" height="283" key="GridCell.Tab.0.right/0.0.1280.689@0.0.1280.689" timestamp="1576584437273" />
+    <state width="1235" height="283" key="GridCell.Tab.0.right/0.0.1280.689@0.0.1280.689" timestamp="1576585683833" />
     <state x="170" y="0" key="Maven.ArtifactSearchDialog" timestamp="1576582627419">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
