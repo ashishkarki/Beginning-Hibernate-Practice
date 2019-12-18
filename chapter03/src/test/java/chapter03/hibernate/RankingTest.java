@@ -1,5 +1,7 @@
 package chapter03.hibernate;
 
+import chapter03.application.HibernateRankingService;
+import chapter03.application.RankingService;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.MetadataSources;
@@ -20,10 +22,14 @@ public class RankingTest {
 
     SessionFactory sessionFactory;
 
+    RankingService rankingService;
+
     @BeforeMethod
     public void setup() {
         var registry = new StandardServiceRegistryBuilder().configure().build();
         sessionFactory = new MetadataSources(registry).buildMetadata().buildSessionFactory();
+
+        rankingService = new HibernateRankingService();
     }
 
     @AfterMethod
@@ -36,10 +42,10 @@ public class RankingTest {
         try (var session = sessionFactory.openSession()) {
             var transaction = session.beginTransaction();
 
-            Person subject = savePerson(session, "J. C. Smell");
-            Skill skill = saveSkill(session, "Java");
+            Person subject = rankingService.savePerson(session, "J. C. Smell");
+            Skill skill = rankingService.saveSkill(session, "Java");
 
-            Person observer = savePerson(session, "Drew Lombardo");
+            Person observer = rankingService.savePerson(session, "Drew Lombardo");
 
             Ranking ranking = new Ranking();
             ranking.setSubject(subject);
@@ -54,7 +60,7 @@ public class RankingTest {
 
     @Test
     public void testRankings() {
-        populateRankingData();
+        rankingService.populateRankingData();
 
         try (var session = sessionFactory.openSession()) {
             var transaction = session.beginTransaction();
@@ -85,7 +91,7 @@ public class RankingTest {
 
     @Test
     public void testChangeRanking() {
-        populateRankingData();
+        rankingService.populateRankingData();
 
         try (var session = sessionFactory.openSession()) {
             var transaction = session.beginTransaction();
@@ -98,12 +104,12 @@ public class RankingTest {
             transaction.commit();
         }
 
-        assertThat(getAverage("J. C. Smell", "Java")).isEqualTo(8);
+        assertThat(rankingService.getRankingFor("J. C. Smell", "Java")).isEqualTo(8);
     }
 
     @Test
     public void testRemoveRanking() {
-        populateRankingData();
+        rankingService.populateRankingData();
 
         try (var session = sessionFactory.openSession()) {
             var transaction = session.beginTransaction();
@@ -117,7 +123,7 @@ public class RankingTest {
         }
 
         // verify that ranking was deleted and that there is new average ranking
-        assertThat(getAverage("J. C. Smell", "Java")).isEqualTo(7);
+        assertThat(rankingService.getRankingFor("J. C. Smell", "Java")).isEqualTo(7);
     }
 
     private Ranking findRanking(Session session, String subjectName, String observerName, String skillName) {
@@ -133,92 +139,6 @@ public class RankingTest {
         query.setParameter("skill", skillName);
 
         // get the one unique result with this combination
-        var ranking = query.uniqueResult();
-
-        return ranking;
-    }
-
-    private int getAverage(String subjectName, String skillName) {
-        try (var session = sessionFactory.openSession()) {
-            var transcation = session.beginTransaction();
-
-            Query<Ranking> rankingQuery = session.createQuery(
-                    "from Ranking r "
-                            + "where r.subject.name = :subject and "
-                            + "r.skill.name = :skill"
-                    , Ranking.class);
-
-            rankingQuery.setParameter("subject", subjectName);
-            rankingQuery.setParameter("skill", skillName);
-
-            IntSummaryStatistics statistics = rankingQuery.list()
-                    .stream()
-                    .collect(Collectors.summarizingInt(Ranking::getRanking));
-
-            int average = (int) statistics.getAverage();
-
-            transcation.commit();
-
-            return average;
-        }
-    }
-
-    private Person findPerson(Session session, String nameToFind) {
-        var query = session.createQuery("from Person p where p.name = :name", Person.class);
-        query.setParameter("name", nameToFind);
-        var person = query.uniqueResult();
-
-        return person;
-    }
-
-    private Person savePerson(Session session, String nameToSave) {
-        var person = findPerson(session, nameToSave);
-
-        if (person == null) {
-            person = new Person();
-            person.setName(nameToSave);
-            session.save(person);
-        }
-
-        return person;
-    }
-
-    private Skill saveSkill(Session session, String skillToSave) {
-        var skill = new Skill();
-        skill.setName(skillToSave);
-
-        session.save(skill);
-
-        return skill;
-    }
-
-    private void populateRankingData() {
-        try (var session = sessionFactory.openSession()) {
-            var transcation = session.beginTransaction();
-
-            createData(session, "J. C. Smell", "Gene Showrama", "Java", 6);
-            createData(session, "J. C. Smell", "Scottball Most", "Java", 7);
-            createData(session, "J. C. Smell", "Drew Lombardo", "Java", 8);
-            transcation.commit();
-        }
-    }
-
-    // create a new complex Person
-    private void createData(
-            Session session,
-            String subjectName,
-            String observerName,
-            String skillName,
-            int rank) {
-        var subject = savePerson(session, subjectName);
-        var observer = savePerson(session, observerName);
-        var skill = saveSkill(session, skillName);
-
-        Ranking ranking = new Ranking();
-        ranking.setSubject(subject);
-        ranking.setObserver(observer);
-        ranking.setSkill(skill);
-        ranking.setRanking(rank);
-        session.save(ranking);
+        return query.uniqueResult();
     }
 }

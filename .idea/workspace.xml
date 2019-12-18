@@ -2,13 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="160ccef0-5760-46d9-b83c-f241cfe7b2f8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/util/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chapter03/src/test/java/chapter03/application/AddRankingTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/util/src/main/java/hibernate/util/SessionUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/util/src/test/java/hibernate/util/SessionUtilTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/util/src/test/resources/META-INF/persistence.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/util/src/test/resources/hibernate.cfg.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/util/util.mv.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/chapter03/db2.mv.db" beforeDir="false" afterPath="$PROJECT_DIR$/chapter03/db2.mv.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chapter03/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/chapter03/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chapter03/src/main/java/chapter03/application/HibernateRankingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/chapter03/src/main/java/chapter03/application/HibernateRankingService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chapter03/src/main/java/chapter03/application/RankingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/chapter03/src/main/java/chapter03/application/RankingService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/chapter03/src/test/java/chapter03/hibernate/RankingTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/chapter03/src/test/java/chapter03/hibernate/RankingTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chapter03/target/test-classes/chapter03/hibernate/RankingTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/chapter03/target/test-classes/chapter03/hibernate/RankingTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,90 +37,77 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1V42zzW7z6rEohTAnXvtGaSSecI" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/chapter03/src/test" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/util/src/test/resources" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Color Scheme Font" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
       <recent name="chapter03.hibernate" />
       <recent name="chapter03.simple" />
     </key>
-    <key name="CreateTestDialog.Recents.Supers">
-      <recent name="" />
-    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="chapter03.application" />
       <recent name="chapter03.hibernate" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="chapter02.pojo" />
     </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Sushma Karki\Desktop\ashish-temp-disposable\Java-related\Beginning-Hibernate-Practice\util\src\test\resources" />
       <recent name="C:\Users\Sushma Karki\Desktop\ashish-temp-disposable\Java-related\Beginning-Hibernate-Practice\chapter03\src\test" />
       <recent name="C:\Users\Sushma Karki\Desktop\ashish-temp-disposable\Java-related\Beginning-Hibernate-Practice\chapter02\src\main\resources" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.RankingTest">
-    <configuration name="ModelTest.testModelCreation" type="TestNG" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="TestNG.AddRankingTest">
+    <configuration name="AddRankingTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="chapter03" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="chapter03.hibernate.*" />
+          <option name="PATTERN" value="chapter03.application.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="chapter03.simple" />
-      <option name="MAIN_CLASS_NAME" value="chapter03.simple.ModelTest" />
-      <option name="METHOD_NAME" value="testModelCreation" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="PersistenceTest.readMessage" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="chapter02" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="chapter02.hibernate.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="chapter02.hibernate" />
-      <option name="MAIN_CLASS_NAME" value="chapter02.hibernate.PersistenceTest" />
-      <option name="METHOD_NAME" value="readMessage" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="PersonTest" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="chapter03" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="chapter03.hibernate.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="chapter03.hibernate" />
-      <option name="MAIN_CLASS_NAME" value="chapter03.hibernate.PersonTest" />
+      <option name="PACKAGE_NAME" value="chapter03.application" />
+      <option name="MAIN_CLASS_NAME" value="chapter03.application.AddRankingTest" />
       <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AddRankingTest.addRanking" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="chapter03" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="chapter03.application.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="chapter03.application" />
+      <option name="MAIN_CLASS_NAME" value="chapter03.application.AddRankingTest" />
+      <option name="METHOD_NAME" value="addRanking" />
+      <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
       <method v="2">
@@ -156,13 +149,31 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="SessionUtilTest.testSessionFactory" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="util" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="hibernate.util.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="hibernate.util" />
+      <option name="MAIN_CLASS_NAME" value="hibernate.util.SessionUtilTest" />
+      <option name="METHOD_NAME" value="testSessionFactory" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.AddRankingTest" />
+        <item itemvalue="TestNG.AddRankingTest.addRanking" />
         <item itemvalue="TestNG.RankingTest" />
+        <item itemvalue="TestNG.SessionUtilTest.testSessionFactory" />
         <item itemvalue="TestNG.RankingTest.testChangeRanking" />
-        <item itemvalue="TestNG.PersonTest" />
-        <item itemvalue="TestNG.ModelTest.testModelCreation" />
-        <item itemvalue="TestNG.PersistenceTest.readMessage" />
       </list>
     </recent_temporary>
   </component>
@@ -191,15 +202,18 @@
     </task>
     <servers />
   </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
   <component name="WindowStateProjectService">
     <state x="397" y="147" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1576510023157">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
     <state x="397" y="147" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1280.689@0.0.1280.689" timestamp="1576510023157" />
-    <state x="445" y="28" key="#com.intellij.ide.util.MemberChooser" timestamp="1576584308408">
+    <state x="445" y="28" key="#com.intellij.ide.util.MemberChooser" timestamp="1576666355065">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state x="445" y="28" key="#com.intellij.ide.util.MemberChooser/0.0.1280.689@0.0.1280.689" timestamp="1576584308408" />
+    <state x="445" y="28" key="#com.intellij.ide.util.MemberChooser/0.0.1280.689@0.0.1280.689" timestamp="1576666355065" />
     <state x="370" y="120" key="#com.intellij.ide.util.PackageChooserDialog" timestamp="1576580014877">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
@@ -208,10 +222,10 @@
       <screen x="0" y="0" width="1280" height="689" />
     </state>
     <state x="184" y="37" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog/0.0.1280.689@0.0.1280.689" timestamp="1576549838169" />
-    <state x="437" y="203" width="406" height="292" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1576579610984">
+    <state x="437" y="203" width="414" height="318" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1576665676873">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state x="437" y="203" width="406" height="292" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1280.689@0.0.1280.689" timestamp="1576579610984" />
+    <state x="437" y="203" width="414" height="318" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1280.689@0.0.1280.689" timestamp="1576665676873" />
     <state x="490" y="222" width="300" height="247" key="DBNavigator.ConnectionAuthenticationDialog" timestamp="1576577019969">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
@@ -228,30 +242,30 @@
       <screen x="0" y="0" width="1280" height="689" />
     </state>
     <state x="441" y="98" key="FileChooserDialogImpl/0.0.1280.689@0.0.1280.689" timestamp="1576579443785" />
-    <state width="1235" height="283" key="GridCell.Tab.0.bottom" timestamp="1576589115253">
+    <state width="1281" height="281" key="GridCell.Tab.0.bottom" timestamp="1576668015148">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state width="1235" height="283" key="GridCell.Tab.0.bottom/0.0.1280.689@0.0.1280.689" timestamp="1576589115253" />
-    <state width="1235" height="283" key="GridCell.Tab.0.center" timestamp="1576589115252">
+    <state width="1281" height="281" key="GridCell.Tab.0.bottom/0.0.1280.689@0.0.1280.689" timestamp="1576668015148" />
+    <state width="1281" height="281" key="GridCell.Tab.0.center" timestamp="1576668015148">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state width="1235" height="283" key="GridCell.Tab.0.center/0.0.1280.689@0.0.1280.689" timestamp="1576589115252" />
-    <state width="1235" height="283" key="GridCell.Tab.0.left" timestamp="1576589115252">
+    <state width="1281" height="281" key="GridCell.Tab.0.center/0.0.1280.689@0.0.1280.689" timestamp="1576668015148" />
+    <state width="1281" height="281" key="GridCell.Tab.0.left" timestamp="1576668015148">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state width="1235" height="283" key="GridCell.Tab.0.left/0.0.1280.689@0.0.1280.689" timestamp="1576589115252" />
-    <state width="1235" height="283" key="GridCell.Tab.0.right" timestamp="1576589115252">
+    <state width="1281" height="281" key="GridCell.Tab.0.left/0.0.1280.689@0.0.1280.689" timestamp="1576668015148" />
+    <state width="1281" height="281" key="GridCell.Tab.0.right" timestamp="1576668015148">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state width="1235" height="283" key="GridCell.Tab.0.right/0.0.1280.689@0.0.1280.689" timestamp="1576589115252" />
+    <state width="1281" height="281" key="GridCell.Tab.0.right/0.0.1280.689@0.0.1280.689" timestamp="1576668015148" />
     <state x="170" y="0" key="Maven.ArtifactSearchDialog" timestamp="1576582627419">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
     <state x="170" y="0" key="Maven.ArtifactSearchDialog/0.0.1280.689@0.0.1280.689" timestamp="1576582627419" />
-    <state x="141" y="0" key="SettingsEditor" timestamp="1576577366937">
+    <state x="141" y="0" key="SettingsEditor" timestamp="1576663645831">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state x="141" y="0" key="SettingsEditor/0.0.1280.689@0.0.1280.689" timestamp="1576577366937" />
+    <state x="141" y="0" key="SettingsEditor/0.0.1280.689@0.0.1280.689" timestamp="1576663645831" />
     <state x="335" y="167" key="com.intellij.ide.util.TipDialog" timestamp="1576577380229">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
@@ -264,9 +278,17 @@
       <screen x="0" y="0" width="1280" height="689" />
     </state>
     <state x="336" y="82" width="609" height="526" key="find.popup/0.0.1280.689@0.0.1280.689" timestamp="1576584405039" />
-    <state x="303" y="10" width="672" height="678" key="search.everywhere.popup" timestamp="1576589305565">
+    <state x="383" y="0" key="refactoring.ChangeSignatureDialog" timestamp="1576663469643">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state x="303" y="10" width="672" height="678" key="search.everywhere.popup/0.0.1280.689@0.0.1280.689" timestamp="1576589305565" />
+    <state x="383" y="0" key="refactoring.ChangeSignatureDialog/0.0.1280.689@0.0.1280.689" timestamp="1576663469643" />
+    <state x="297" y="153" key="run.anything.popup" timestamp="1576667784222">
+      <screen x="0" y="0" width="1280" height="689" />
+    </state>
+    <state x="297" y="153" key="run.anything.popup/0.0.1280.689@0.0.1280.689" timestamp="1576667784222" />
+    <state x="303" y="10" width="672" height="678" key="search.everywhere.popup" timestamp="1576667603133">
+      <screen x="0" y="0" width="1280" height="689" />
+    </state>
+    <state x="303" y="10" width="672" height="678" key="search.everywhere.popup/0.0.1280.689@0.0.1280.689" timestamp="1576667603133" />
   </component>
 </project>
