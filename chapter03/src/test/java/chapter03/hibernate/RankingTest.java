@@ -5,25 +5,30 @@ import org.hibernate.SessionFactory;
 import org.hibernate.boot.MetadataSources;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.query.Query;
-import org.testng.annotations.BeforeClass;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import java.util.IntSummaryStatistics;
 import java.util.stream.Collectors;
 
+import static org.assertj.core.api.Assertions.assertThat;
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertNotNull;
-
-import static org.assertj.core.api.Assertions.assertThat;
 
 public class RankingTest {
 
     SessionFactory sessionFactory;
 
-    @BeforeClass
+    @BeforeMethod
     public void setup() {
         var registry = new StandardServiceRegistryBuilder().configure().build();
         sessionFactory = new MetadataSources(registry).buildMetadata().buildSessionFactory();
+    }
+
+    @AfterMethod
+    public void teardown() {
+        sessionFactory.close();
     }
 
     @Test
@@ -85,19 +90,8 @@ public class RankingTest {
         try (var session = sessionFactory.openSession()) {
             var transaction = session.beginTransaction();
 
-            Query<Ranking> query = session.createQuery(
-                    "from Ranking r "
-                            + "where r.subject.name = :subject and "
-                            + "r.observer.name = :observer and "
-                            + "r.skill.name = :skill"
-                    , Ranking.class);
+            var ranking = findRanking(session, "J. C. Smell", "Gene Showrama", "Java");
 
-            query.setParameter("subject", "J. C. Smell");
-            query.setParameter("observer", "Gene Showrama");
-            query.setParameter("skill", "Java");
-
-            // get the one unique result with this combination
-            var ranking = query.uniqueResult();
             assertNotNull(ranking, "Could not find matching ranking");
             ranking.setRanking(9); // this is the updating ranking value
 
@@ -105,6 +99,43 @@ public class RankingTest {
         }
 
         assertThat(getAverage("J. C. Smell", "Java")).isEqualTo(8);
+    }
+
+    @Test
+    public void testRemoveRanking() {
+        populateRankingData();
+
+        try (var session = sessionFactory.openSession()) {
+            var transaction = session.beginTransaction();
+
+            var ranking = findRanking(session, "J. C. Smell", "Gene Showrama", "Java");
+            assertNotNull(ranking, "No ranking found for this combination");
+
+            session.delete(ranking);
+
+            transaction.commit();
+        }
+
+        // verify that ranking was deleted and that there is new average ranking
+        assertThat(getAverage("J. C. Smell", "Java")).isEqualTo(7);
+    }
+
+    private Ranking findRanking(Session session, String subjectName, String observerName, String skillName) {
+        Query<Ranking> query = session.createQuery(
+                "from Ranking r "
+                        + "where r.subject.name = :subject and "
+                        + "r.observer.name = :observer and "
+                        + "r.skill.name = :skill"
+                , Ranking.class);
+
+        query.setParameter("subject", subjectName);
+        query.setParameter("observer", observerName);
+        query.setParameter("skill", skillName);
+
+        // get the one unique result with this combination
+        var ranking = query.uniqueResult();
+
+        return ranking;
     }
 
     private int getAverage(String subjectName, String skillName) {

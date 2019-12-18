@@ -2,10 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="160ccef0-5760-46d9-b83c-f241cfe7b2f8" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/util/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/chapter03/db2.mv.db" beforeDir="false" afterPath="$PROJECT_DIR$/chapter03/db2.mv.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/chapter03/src/test/java/chapter03/hibernate/RankingTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/chapter03/src/test/java/chapter03/hibernate/RankingTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/chapter03/target/test-classes/chapter03/hibernate/RankingTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/chapter03/target/test-classes/chapter03/hibernate/RankingTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,7 +67,7 @@
       <recent name="C:\Users\Sushma Karki\Desktop\ashish-temp-disposable\Java-related\Beginning-Hibernate-Practice\chapter02\src\main\resources" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.RankingTest.testChangeRanking">
+  <component name="RunManager" selected="TestNG.RankingTest">
     <configuration name="ModelTest.testModelCreation" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="chapter03" />
       <extension name="coverage">
@@ -155,8 +158,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.RankingTest.testChangeRanking" />
         <item itemvalue="TestNG.RankingTest" />
+        <item itemvalue="TestNG.RankingTest.testChangeRanking" />
         <item itemvalue="TestNG.PersonTest" />
         <item itemvalue="TestNG.ModelTest.testModelCreation" />
         <item itemvalue="TestNG.PersistenceTest.readMessage" />
@@ -225,22 +228,22 @@
       <screen x="0" y="0" width="1280" height="689" />
     </state>
     <state x="441" y="98" key="FileChooserDialogImpl/0.0.1280.689@0.0.1280.689" timestamp="1576579443785" />
-    <state width="1235" height="283" key="GridCell.Tab.0.bottom" timestamp="1576585683834">
+    <state width="1235" height="283" key="GridCell.Tab.0.bottom" timestamp="1576589115253">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state width="1235" height="283" key="GridCell.Tab.0.bottom/0.0.1280.689@0.0.1280.689" timestamp="1576585683834" />
-    <state width="1235" height="283" key="GridCell.Tab.0.center" timestamp="1576585683833">
+    <state width="1235" height="283" key="GridCell.Tab.0.bottom/0.0.1280.689@0.0.1280.689" timestamp="1576589115253" />
+    <state width="1235" height="283" key="GridCell.Tab.0.center" timestamp="1576589115252">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state width="1235" height="283" key="GridCell.Tab.0.center/0.0.1280.689@0.0.1280.689" timestamp="1576585683833" />
-    <state width="1235" height="283" key="GridCell.Tab.0.left" timestamp="1576585683833">
+    <state width="1235" height="283" key="GridCell.Tab.0.center/0.0.1280.689@0.0.1280.689" timestamp="1576589115252" />
+    <state width="1235" height="283" key="GridCell.Tab.0.left" timestamp="1576589115252">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state width="1235" height="283" key="GridCell.Tab.0.left/0.0.1280.689@0.0.1280.689" timestamp="1576585683833" />
-    <state width="1235" height="283" key="GridCell.Tab.0.right" timestamp="1576585683833">
+    <state width="1235" height="283" key="GridCell.Tab.0.left/0.0.1280.689@0.0.1280.689" timestamp="1576589115252" />
+    <state width="1235" height="283" key="GridCell.Tab.0.right" timestamp="1576589115252">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state width="1235" height="283" key="GridCell.Tab.0.right/0.0.1280.689@0.0.1280.689" timestamp="1576585683833" />
+    <state width="1235" height="283" key="GridCell.Tab.0.right/0.0.1280.689@0.0.1280.689" timestamp="1576589115252" />
     <state x="170" y="0" key="Maven.ArtifactSearchDialog" timestamp="1576582627419">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
@@ -261,9 +264,9 @@
       <screen x="0" y="0" width="1280" height="689" />
     </state>
     <state x="336" y="82" width="609" height="526" key="find.popup/0.0.1280.689@0.0.1280.689" timestamp="1576584405039" />
-    <state x="303" y="10" width="672" height="678" key="search.everywhere.popup" timestamp="1576584380260">
+    <state x="303" y="10" width="672" height="678" key="search.everywhere.popup" timestamp="1576589305565">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state x="303" y="10" width="672" height="678" key="search.everywhere.popup/0.0.1280.689@0.0.1280.689" timestamp="1576584380260" />
+    <state x="303" y="10" width="672" height="678" key="search.everywhere.popup/0.0.1280.689@0.0.1280.689" timestamp="1576589305565" />
   </component>
 </project>

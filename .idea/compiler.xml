@@ -6,6 +6,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="util" />
         <module name="chapter03" />
         <module name="chapter02" />
         <module name="Beginning-Hibernate-Practice" />

@@ -11,6 +11,7 @@
     <modules>
         <module>chapter02</module>
         <module>chapter03</module>
+        <module>util</module>
     </modules>
 
     <name>Beginning-Hibernate-Practice</name>
